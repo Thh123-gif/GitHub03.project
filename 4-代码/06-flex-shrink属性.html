@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            border:1px solid red;
+            margin:50px auto;
+            display: flex;
+        }
+        .box .item{
+            width: 150px;
+            height: 150px;
+        }
+        /* flex-shrink属性
+        flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+        如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。负值对该属性无效。
+        如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+
+        flex-shrink:定义收缩比例，通过设置的值来计算收缩空间
+        比例值计算 ：当前空间的flex-shrink/所有兄弟元素的flex-shrink的和 */
+        .box .item:nth-child(1){
+            background: red;
+            /* flex-shrink:1; */
+
+            /* flex-shrink: 0;代表不缩小 */
+            /* flex-shrink: 0; */
+
+            flex-shrink: 2;
+        }
+        .box .item:nth-child(2){
+            background: green;
+            flex-shrink:1;
+        }
+        .box .item:nth-child(3){
+            background: blue;
+            flex-shrink:1;
+        }
+        .box .item:nth-child(4){
+            background: orange;
+            flex-shrink:1;
+        }
+        .box .item:nth-child(5){
+            background: pink;
+            flex-shrink:1;
+        }
+
+        /* 需要缩小的空间,也就是超出的空间   5*150 - 600 = 150 */
+        /* 因为我们每个flex-shrink:1;      150 / 6 = 25 */
+        /* 现在第一项的宽度应该为:          150 - 50 = 100 */
+        /* 现在第二项之后的项目的宽度应该为: 150 - 25 = 125 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

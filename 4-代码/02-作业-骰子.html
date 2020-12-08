@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #282828;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #e7e7e7;
+            border-radius: 5px;
+            margin:20px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .box .item{
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #333333;
+        }
+
+        .box:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box:nth-child(1) .row:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+        }
+        .box:nth-child(1) .row:nth-child(2){
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+        }
+        .box:nth-child(2) .row{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box:nth-child(3){
+            display: flex;
+            justify-content:space-between;
+        }
+        .box:nth-child(3) .row{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+        .box:nth-child(3) .row:nth-child(2){
+            justify-content:center;
+        }
+
+        .box:nth-child(4){
+            display:flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+
+        .box:nth-child(4) .row{
+            display: flex;
+            justify-content:space-between;
+        }
+        .box:nth-child(4) .row:nth-child(2){
+            justify-content:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="row">
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        
+        <div class="row">
+            <div class="item"></div>
+        </div>
+        
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        
+        <div class="row">
+            <div class="item"></div>
+        </div>
+        
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</body>
+</html>

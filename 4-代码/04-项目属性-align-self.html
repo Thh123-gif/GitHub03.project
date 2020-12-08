@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        .box{
+            border:1px solid red;
+            width: 600px;
+            height: 536px;
+            margin:20px auto;
+        }
+        .box h2{
+            background: #f3f3f3;
+            font-weight: normal;
+            text-align: center;
+            height: 36px;
+            line-height: 36px;
+            font-size:14px;
+        }
+        .box ul li{
+            width: 100px;
+            background: pink;
+            text-align: center;
+            margin: 10px;
+        }
+        .box ul{
+            height: 500px;
+            /* 开启弹性盒子 */
+            display: flex;
+
+            /* align-items设置单行项目侧轴对齐方式 */
+            align-items:flex-start;
+            /* align-content设置多行项目侧轴对齐方式 */
+            /* align-self设置项目自己的在侧轴的对齐方式 align-self这属性是加到项目中的 */
+        }
+        .box ul li:nth-child(1){
+            align-self:auto;
+        }
+        .box ul li:nth-child(2){
+            align-self:stretch;
+        }
+        .box ul li:nth-child(3){
+            align-self:center;
+        }
+        .box ul li:nth-child(4){
+            align-self:flex-start;
+        }
+        .box ul li:nth-child(5){
+            align-self:flex-end;
+        }
+        .box ul li:nth-child(6){
+            align-self:baseline;
+        }
+        .box ul li:nth-child(7){
+            align-self:baseline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>align-self控制项目自己在侧轴上的排列方式,</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li style="font-size:50px">xyq</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </div>
+
+
+    <style>
+        img{
+            /* 设置vertical-align值不为baseline可以去掉图片底部分析 */
+            /* vertical-align: bottom; */
+
+            /* 或者给img转成块级元素也可以去掉底部缝隙 */
+            display: block;
+        }
+    </style>
+    <p style="background:skyblue">
+        <img src="images/1.jpg"/>
+        <div style="background:orange;display:block;">xyz</div>
+    </p>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>

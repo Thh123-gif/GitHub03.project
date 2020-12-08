@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        .box{
+            width: 100%;
+            height: 600px;
+            border:1px solid #d2d2d2;
+            margin:100px auto;
+            box-sizing: border-box;
+            max-width: 600px;
+        }
+        .box ul {
+            display: flex;
+        }
+        .box ul li{
+            background: #95ef97;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 1px;
+            flex:1;
+        }
+        .box ul li:last-child{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>首页</li>
+            <li>商品分类</li>
+            <li>我的订单</li>
+            <li>最新商品</li>
+            <li>联系我们</li>
+        </ul>
+    </div>
+</body>
+</html>

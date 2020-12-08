@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex 属性  要记 */
+        /* flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。 */
+        /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+        /* flex 控制子项目的缩放比例,不指定flex 属性，则不参与分配.      */
+        /* flex:number值  也就是一般取值使用数值,不带单位,默认值0,如果都是1代表子元素都有相同的宽度 */
+
+        /* .item {
+            flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+        }
+        该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。 */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            border:1px solid red;
+            margin:50px auto;
+            display: flex;
+        }
+        .box .item{
+            width: 150px;
+            height: 150px;
+        }
+        .box .item:nth-child(1){
+            background: red;
+            /* flex:number值; */
+            flex:1;
+        }
+        .box .item:nth-child(2){
+            background: green;
+            flex:2;
+            
+            /* 注意: 不指定flex 属性，则不参与分配 */
+
+            /* flex:0; */
+        }
+        .box .item:nth-child(3){
+            background: blue;
+            flex:1;
+        }
+
+        /* 计算方式:   */
+        /* 每份的宽度 = 总宽度 / flex总份数  */
+        /* 每份的宽度 * flex值就可以得到项目对应的宽度 */
+        /* 注意: 不指定flex 属性，则不参与分配 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>

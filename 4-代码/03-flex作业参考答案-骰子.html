@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #282828;
+			color:white;
+		}
+		.box{
+			width:420px;
+			margin: 50px auto;
+			box-shadow: 0px 0px 3px 5px #f0f0f0;
+			border-radius: 5px;
+			padding:10px;
+			overflow: hidden;
+			display: flex;
+			flex-flow:row wrap;
+		}
+		.box .container{
+			width:100px;
+			height:100px;
+			background-color: #E7E7E7;
+			border-radius: 10px;
+			box-shadow: 0px 0px 0px 5px #D7D7D7;
+			padding:5px;
+			margin:15px;
+
+		}
+		.item{
+			width: 27px;
+			height: 27px;
+			background: #333333;
+			border-radius: 50%;
+			box-shadow:0px 2px 0px 1px #4C4C4C;
+		}
+		/*一点*/
+		.box:first-child .container:nth-child(1){
+			display: flex;
+		}
+		.box:first-child .container:nth-child(2){
+			display: flex;
+			justify-content:center;
+		}
+		.box:first-child .container:nth-child(3){
+			display: flex;
+			justify-content:flex-end;
+		}
+		.box:first-child .container:nth-child(4){
+			display: flex;
+			align-items:center;
+		}
+		.box:first-child .container:nth-child(5){
+			display: flex;
+			align-items:center;
+			justify-content:center;
+		}
+		.box:first-child .container:nth-child(6){
+			display: flex;
+			align-items:center;
+			justify-content:flex-end;
+		}
+		.box:first-child .container:nth-child(7){
+			display: flex;
+			align-items:flex-end;
+			justify-content:flex-start;
+		}
+		.box:first-child .container:nth-child(8){
+			display: flex;
+			align-items:flex-end;
+			justify-content:center;
+		}
+		.box:first-child .container:nth-child(9){
+			display: flex;
+			align-items:flex-end;
+			justify-content:flex-end;
+		}
+		
+		/*二点*/
+		.two .container:nth-child(1){
+			display: flex;
+			justify-content:space-between;
+		}
+		.two .container:nth-child(2){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+		}
+		.two .container:nth-child(3){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+			align-items:center;
+		}
+		.two .container:nth-child(4){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+			align-items:flex-end;
+		}
+		.two .container:nth-child(5){
+			display: flex;
+			flex-flow:column wrap;
+		}
+		.two .container:nth-child(5) .item:nth-child(2){
+			align-self:center;
+		}
+
+		.two .container:nth-child(6){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+		}
+		.two .container:nth-child(6) .item:nth-child(2){
+			align-self:flex-end;
+		}
+
+		/*三点*/
+		.three .container:nth-child(1){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+		}
+		.three .container:nth-child(1) .item:nth-child(2){
+			align-self:center;
+		}
+		.three .container:nth-child(1) .item:nth-child(3){
+			align-self:flex-end;
+		}
+
+		/*四点*/
+		.four .container:nth-child(1){
+			display: flex;
+			flex-flow:row wrap;
+			align-content:space-between;
+			justify-content:flex-end;
+		}
+		.four .container:nth-child(1) .item{
+			margin:0 3px;
+		}
+		.four .container:nth-child(2){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+		}
+		.four .container:nth-child(2) .column:nth-child(1){
+			display: flex;
+			justify-content:space-between;
+		}
+		.four .container:nth-child(2) .column:nth-child(2){
+			display: flex;
+			justify-content:space-between;
+		}
+		/*五点*/
+		.five .container:nth-child(1){
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		.five .container:nth-child(1) .row:nth-child(1){
+			display: flex;
+			justify-content:space-between;
+		}
+		.five .container:nth-child(1) .row:nth-child(2){
+			display: flex;
+			justify-content:center;
+		}
+		.five .container:nth-child(1) .row:nth-child(3){
+			display: flex;
+			justify-content:space-between;
+		}
+		/*六点*/
+		.six .container:nth-child(1){
+			display: flex;
+			flex-flow:row wrap;
+			justify-content:space-between;
+			align-content:space-between;
+		}
+		.six .container:nth-child(2){
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+			align-content:space-between;
+		}
+
+		.six .container:nth-child(3){
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		.six .container:nth-child(3) .row:nth-child(1){
+			display: flex;
+			justify-content:space-between;
+		}
+		.six .container:nth-child(3) .row:nth-child(2){
+			display: flex;
+			justify-content:center;
+		}
+		.six .container:nth-child(3) .row:nth-child(3){
+			display: flex;
+			justify-content:space-between;
+		}
+
+		.nine .container:nth-child(1){
+			display: flex;
+			flex-flow:row wrap;
+			justify-content:space-between;
+			align-content:space-between;
+		}
+	</style>
+</head>
+<body>
+	<h1 align='center' style='margin-bottom:-40px;'>一点</h1>
+	<div class="box one">
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<!-- <div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+		</div> -->
+	</div>
+
+	<h1 align='center' style='margin-bottom:-40px;'>两点</h1>
+	<div class="box two">
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+	</div>
+
+
+	<h1 align='center' style='margin-bottom:-40px;'>三点</h1>
+	<div class="box three">
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+	</div>
+
+	<h1 align='center' style='margin-bottom:-40px;'>四点</h1>
+	<div class="box four">
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class='container'>
+			<div class="column">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="column">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+	</div>
+	<h1 align='center' style='margin-bottom:-40px;'>五点</h1>
+	<div class="box five">
+		<div class='container'>
+			<div class="row">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="row">
+				<div class="item"></div>
+			</div>
+			<div class="row">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+	</div>
+
+	<h1 align='center' style='margin-bottom:-40px;'>六点</h1>
+	<div class="box six">
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+
+		<div class='container'>
+			<div class="row">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="row">
+				<div class="item"></div>
+			</div>
+			<div class="row">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<h1 align='center' style='margin-bottom:-40px;'>九点</h1>
+	<div class="box nine">
+		<div class='container'>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+	</div>
+</body>
+</html>

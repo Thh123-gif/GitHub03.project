@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        .box{
+            width: 978px;
+            height: 340px;
+            border:1px solid red;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        .box ul {
+            /* 开启弹性盒子 */
+            display: flex;
+            transform: translateX(0px);
+            animation: move 16s 2s infinite;
+        }
+        .box ul:hover{
+            animation-play-state: paused;
+        }
+        .box ul li{
+            width: 234px;
+            height: 340px;
+            background: skyblue;
+            margin-right: 14px;
+            line-height: 340px;
+            text-align: center;
+            font-size:30px;
+            /* flex-shrink: 0;不缩小,保存原本大小 */
+            flex-shrink: 0;
+        }
+
+        @keyframes move {
+            0%,5%{
+                transform: translateX(0px);
+            }
+            20%,25%{
+                transform: translateX( calc(-992px * 1 ) );
+            }
+            40%,45%{
+                transform: translateX( calc(-992px * 2 ) );
+            }
+            60%,65%{
+                transform: translateX( calc(-992px * 3 ) );
+            }
+            80%,85%{
+                transform: translateX( calc(-992px * 4 ) );
+            }
+            100%{
+                transform: translateX( calc(-992px * 5 ) );
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</body>
+</html>

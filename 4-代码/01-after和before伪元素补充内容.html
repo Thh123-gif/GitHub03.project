@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        li::before{
+            content:"❤";
+        }
+        li::after{
+            /* content还可以通过url(图片所在路径) 设置图片,但是设置不了图片的大小 */
+            /* content: url(images/share1.png); */
+
+            content:"";
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border:1px solid red;
+            /* 如果想改变图片的大小,我们可以使用背景图片+背景定位实现 */
+            background:url(images/share1.png);
+            background-size:100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>战三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+        <li>孙七</li>
+    </ul>
+</body>
+</html>

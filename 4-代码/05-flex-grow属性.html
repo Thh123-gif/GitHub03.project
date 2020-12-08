@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            border:1px solid red;
+            margin:50px auto;
+            display: flex;
+        }
+        .box .item{
+            width: 150px;
+            height: 150px;
+        }
+        /* flex-grow属性 */
+        /* flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 */
+        /* flow-grow:可以来扩展子元素的宽度：设置当前元素应该占据剩余空间的比例值 */
+        /* 比例值计算 ：当前空间的flex-grow/所有兄弟元素的flex-grow的和 */
+        /* flex-grow的默认是0:说明子元素并不会去占据剩余的空间 */
+        .box .item:nth-child(1){
+            background: red;
+            flex-grow:1;
+        }
+        .box .item:nth-child(2){
+            background: green;
+            flex-grow:2;
+        }
+        .box .item:nth-child(3){
+            background: blue;
+        }
+        /* 剩余空间 600 - 450 = 150 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>

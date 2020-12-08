@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+           width: 1000px;
+           height: 500px;
+           background: pink;
+           margin:100px auto;
+        }
+        .box .left{
+            width: 200px;
+            height: 100%;
+            float: left;
+            background: skyblue;
+        }
+        .box .right{
+            /* 注意:使用calc()函数的时候,运算符的两边都必须有一个空格 */
+            width: calc( 100% - 200px );
+            /* width: calc( 200px + 2px ); */
+            /* width: calc( 50% + 2px ); */
+            height: 100%;
+            float: left;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- calc() 函数用于动态计算长度值。 -->
+    <!-- https://www.runoob.com/cssref/func-calc.html -->
+
+    <div class="box">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>
